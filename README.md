@@ -1,6 +1,6 @@
 # devops-infrastructure
 
-Status: documentation complete
+Status: monitoring, ansible and documentation complete
 
 ![CI](https://github.com/elnuraErkinbekova/devops-infrastructure/actions/workflows/ci.yml/badge.svg)
 
