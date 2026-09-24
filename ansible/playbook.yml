@@ -1,0 +1,17 @@
+---
+- name: Install Docker and run demo container
+  hosts: webservers
+  become: true
+  tasks:
+    - name: Install Docker
+      ansible.builtin.apt:
+        name: docker.io
+        state: present
+        update_cache: true
+
+    - name: Run demo container
+      community.docker.docker_container:
+        name: devops-demo
+        image: nginx:1.27-alpine
+        ports: ["80:80"]
+        state: started
